@@ -2,11 +2,11 @@
 name = "tenzro-ledger"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Your Name <hilal@tenzro.com>"]
 description = "A quantum-resistant distributed ledger with hardware-rooted security"
 license = "Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/yourusername/tenzro-ledger"
+repository = "https://github.com/tenzro/tenzro-ledger"
 keywords = ["blockchain", "quantum", "ledger", "cryptography", "security"]
 categories = ["cryptography", "database"]
 
