@@ -1,0 +1,43 @@
+[package]
+name = "tenzro-ledger"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A quantum-resistant distributed ledger with hardware-rooted security"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/yourusername/tenzro-ledger"
+keywords = ["blockchain", "quantum", "ledger", "cryptography", "security"]
+categories = ["cryptography", "database"]
+
+[dependencies]
+uuid = { version = "1.3", features = ["v4", "serde"] }
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+pqcrypto-dilithium = "0.4"
+pqcrypto-traits = "0.3"
+log = "0.4"
+env_logger = "0.10"
+dirs = "5.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+test-case = "3.1"
+pretty_assertions = "1.3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = 'abort'
+strip = true
+
+[[bin]]
+name = "tenzro-ledger"
+path = "src/main.rs"
+
+[dependencies.clap]
+version = "4.4"
+features = ["derive"]
